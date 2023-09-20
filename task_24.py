@@ -11,17 +11,17 @@
 from random import randint
 
 n = int(input("Введите количество кустов: "))
-list = []
+lst = []
 for i in range(int(n)):
-    list.append(randint(1, 10))
-print(list)
-max = 0
+    lst.append(randint(1, 10))
+print(lst)
+maxValue = 0
 res = 0
-for i in range(int(n)-1):
-    res = list[i] + list[i + 1] + list[i-1]
-    if res > max:
-        max = res
+for i in range(int(n) - 1):
+    res = lst[i] + lst[i + 1] + lst[i - 1]
+    if res > maxValue:
+        maxValue = res
     else:
         i += 1
 
-print(max, "ягод")
+print(maxValue, "ягод")
